@@ -66,5 +66,8 @@
                 </Grid>
             </Border>
         </Grid>
+
+        <TextBlock Grid.Row="4" Text="WPF - Pet, Cat, Pethotel - öröklődés - Show() és ShowDialog()" Foreground="LightSlateGray" FontSize="12"/>
+
     </Grid>
 </Window>
