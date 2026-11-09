@@ -1,0 +1,70 @@
+﻿<Window x:Class="TappancsHotel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TappancsHotel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#493282" CornerRadius="15" Padding="18">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="🐾" FontSize="31" VerticalAlignment="Center" Margin="0,0,12,0"/>
+                    <StackPanel>
+                        <TextBlock Text="TAPPANCS HOTEL" FontSize="25" FontWeight="Bold" Foreground="White"/>
+                        <TextBlock Text="Gondoskodj a kisállatokról!" FontSize="13" Foreground="White"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="☀️" FontSize="17" FontWeight="Bold" Foreground="White"/>
+                    <TextBlock x:Name="DayText" Text="1. nap" FontSize="17" FontWeight="Bold" Foreground="White" Margin="0,0,22,0"/>
+                    <TextBlock Text="💰" FontSize="17" FontWeight="Bold" Foreground="White"/>
+                    <TextBlock x:Name="MoneyText" Text="1800 Ft" FontSize="17" FontWeight="Bold" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="220"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="White" CornerRadius="15" Padding="16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
+                        <TextBlock Text="🐶 Kisállatok" FontSize="19" FontWeight="Bold" Foreground="DarkBlue"/>
+                        <TextBlock Text="Kattints egy névre!" Foreground="BlueViolet" Margin="0,6,0,15"/>
+                    </StackPanel>
+
+                    <ListBox x:Name="PetList" Grid.Row="1" DisplayMemberPath="Name" FontSize="17" Padding="8" BorderThickness="1" BorderBrush="LightGray"/>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
